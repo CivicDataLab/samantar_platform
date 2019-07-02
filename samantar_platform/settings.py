@@ -170,7 +170,8 @@ CMS_TEMPLATES = (
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right'),
     ('index.html', 'index'),
-    ('roadmap.html', 'roadmap')
+    ('roadmap.html', 'roadmap'),
+    ('architecture.html', 'architecture')
 )
 
 CMS_PERMISSION = True
