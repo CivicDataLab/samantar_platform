@@ -1,22 +1,212 @@
 {% extends "base.html" %}
 {% load cms_tags %}
 {% load static %}
-{% block content %}
-  <header class="masthead">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center justify-content-center text-center">
-        <div class="col-lg-10 align-self-end">
+{% block css_files %}
+    {{ block.super }}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/roadmap.css' %}">
 
-          <h1 class="text-uppercase text-white font-weight-bold">Roadmap</h1>
-          <hr class="divider my-4">
+   
+  
+{% endblock css_files %}
+{% block content %}
+<section class="page-section" id="roadmap">
+      <div class="container py-2">
+    <h2 class="font-weight-light text-center py-3">Roadmap</h2>
+
+    <!-- timeline item 1 -->
+    <div class="row">
+        <!-- timeline item 1 left dot -->
+        <div class="col-auto text-center flex-column d-none d-sm-flex">
+            <div class="row h-50">
+                <div class="col">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+            </div>
+            <h5 class="m-2">
+                <span class="badge badge-pill bg-success">&nbsp;</span>
+            </h5>
+            <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+            </div>
         </div>
-        <div class="col-lg-8 align-self-baseline">
-          <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://github.com/CivicDataLab/samantar_platform.git", target="_blank">Find Out More</a>
+        <!-- timeline item 1 event content -->
+        <div class="col py-2">
+            <div class="card border-success shadow">
+                <div class="card-body">
+                    
+                    <h4 class="card-title text-success">Stakeholder Mapping</h4>
+                    <p class="card-text">Market research for different stakeholders and revenue streams. </p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </header>
+    <!--/row-->
+    <!-- timeline item 2 -->
+    <div class="row">
+        <div class="col-auto text-center flex-column d-none d-sm-flex">
+            <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+            </div>
+            <h5 class="m-2">
+                <span class="badge badge-pill bg-light border">&nbsp;</span>
+            </h5>
+            <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+            </div>
+        </div>
+        <div class="col py-2">
+            <div class="card">
+                <div class="card-body">
+                    
+                    <h4 class="card-title">Corpus Preparation</h4>
+                    <p class="card-text">Corpus Preparation from different sector's public data sets.</p>
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-target="#t2_details" data-toggle="collapse">Show Details ▼</button>
+                    <div class="collapse border" id="t2_details">
+                        <div class="p-2 text-monospace">
+                            <div>Public Finance</div>
+                            <div>Judiciary</div>
+                            <div>Children Story Books</div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/row-->
+    <!-- timeline item 3 -->
+    <div class="row">
+        <div class="col-auto text-center flex-column d-none d-sm-flex">
+            <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+            </div>
+            <h5 class="m-2">
+                <span class="badge badge-pill bg-light border">&nbsp;</span>
+            </h5>
+            <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+            </div>
+        </div>
+        <div class="col py-2">  
+            <div class="card">
+                <div class="card-body">
+                    
+                    <h4 class="card-title">API and Model Integrations</h4>
+                    <p>Develop API and integrate different models.</p>
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-target="#t3_details" data-toggle="collapse">Show Details ▼</button>
+                    <div class="collapse border" id="t3_details">
+                        <div class="p-2 text-monospace">
+                            <div>Translation Framework Pipeline.</div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/row-->
+    <!-- timeline item 4 -->
+    <div class="row">
+        <div class="col-auto text-center flex-column d-none d-sm-flex">
+            <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+            </div>
+            <h5 class="m-2">
+                <span class="badge badge-pill bg-light border">&nbsp;</span>
+            </h5>
+            <div class="row h-50">
+                <div class="col">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+            </div>
+        </div>
+        <div class="col py-2">
+            <div class="card">
+                <div class="card-body">
+                    
+                    <h4 class="card-title">Domain Adaptation</h4>
+                    <p>Add layer of domains to existing models.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/row-->
+    <!-- timeline item 5 -->
+    <div class="row">
+        <div class="col-auto text-center flex-column d-none d-sm-flex">
+            <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+            </div>
+            <h5 class="m-2">
+                <span class="badge badge-pill bg-light border">&nbsp;</span>
+            </h5>
+            <div class="row h-50">
+                <div class="col">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+            </div>
+        </div>
+        <div class="col py-2">
+            <div class="card">
+                <div class="card-body">
+                    
+                    <h4 class="card-title">Documentation</h4>
+                    <p>Document eveything.</p>
+                </div>
+            </div>
+        </div>
+</div>
+<!--container-->
+
+<hr>
+
+
+    <!--/row-->
+</div>
+  
+  <script>
+    // sandbox disable popups
+    if (window.self !== window.top && window.name!="view1") {;
+      window.alert = function(){/*disable alert*/};
+      window.confirm = function(){/*disable confirm*/};
+      window.prompt = function(){/*disable prompt*/};
+      window.open = function(){/*disable open*/};
+    }
+    
+    // prevent href=# click jump
+    document.addEventListener("DOMContentLoaded", function() {
+      var links = document.getElementsByTagName("A");
+      for(var i=0; i < links.length; i++) {
+        if(links[i].href.indexOf('#')!=-1) {
+          links[i].addEventListener("click", function(e) {
+          console.debug("prevent href=# click");
+              if (this.hash) {
+                if (this.hash=="#") {
+                  e.preventDefault();
+                  return false;
+                }
+                else {
+                  /*
+                  var el = document.getElementById(this.hash.replace(/#/, ""));
+                  if (el) {
+                    el.scrollIntoView(true);
+                  }
+                  */
+                }
+              }
+              return false;
+          })
+        }
+      }
+    }, false);
+  </script>
+  
+    </div>
+  </section>
 
 
 {% endblock content %}
