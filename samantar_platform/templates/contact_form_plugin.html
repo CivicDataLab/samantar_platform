@@ -1,17 +1,12 @@
 
-<!DOCTYPE html>
+{% load sekizai_tags static cms_tags %}
 <html lang="en">
 <head>
+{% addtoblock "css" %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+{% endaddtoblock %}
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <style type="text/css">
-    
-body {
-  padding: 20px 0;
-  font-family: Lato, sans-serif;
-}
-
-    </style>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script type="text/javascript">
@@ -30,15 +25,11 @@ body {
 <body>
       <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,400,700'>
-<div class="container">
 
-    <div class="row">
-
-      <div class="col-lg-8 col-lg-offset-2">
 
         
         <form id="contact-form" method="post" action="" role="form">
-
+            {% csrf_token %}
         <div class="messages"></div>
 
         <div class="controls">
@@ -63,7 +54,7 @@ body {
             <div class="col-md-12">
               <div class="form-group">
                 <label for="form_email">Email *</label>
-                <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                <input id="form_email" type="email" name="sender" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
                 <div class="help-block with-errors"></div>
               </div>
             </div>
@@ -76,6 +67,16 @@ body {
                 <div class="help-block with-errors"></div>
               </div>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+               <label for="id_cc_myself" class="checkbox_cc">Cc myself:</label>
+                 <input type="checkbox" name="cc_myself" id="id_cc_myself">
+              </div>
+            </div>
+          </div>
+
             <div class="col-md-12">
               <input type="submit" class="btn btn-success btn-send" value="Send message">
             </div>
