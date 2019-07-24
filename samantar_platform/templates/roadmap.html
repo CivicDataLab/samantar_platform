@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 {% load cms_tags %}
 {% load static %}
+{% load menu_tags %}
 {% block css_files %}
     {{ block.super }}
         <link rel="stylesheet" type="text/css" href="{% static 'css/roadmap.css' %}">
-
-   
-  
 {% endblock css_files %}
 {% block content %}
+       
 <section class="page-section" id="roadmap">
-      <div class="container py-2">
+      <div class="container py-2">   
     <h2 class="font-weight-light text-center py-3">Roadmap</h2>
+
 
     <!-- timeline item 1 -->
     <div class="row">
