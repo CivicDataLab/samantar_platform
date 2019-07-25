@@ -9,6 +9,7 @@ from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.static import serve
+from . import views
 
 admin.autodiscover()
 
@@ -19,6 +20,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     url(r'^admin/', admin.site.urls),  # NOQA
+    url(r'^contact', views.contact, name = 'contact'),
     url(r'^', include('cms.urls')),
 )
 
