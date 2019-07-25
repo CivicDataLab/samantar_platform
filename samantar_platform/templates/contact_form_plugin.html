@@ -1,0 +1,83 @@
+
+{% load sekizai_tags static cms_tags %}
+<html lang="en">
+<head>
+{% addtoblock "css" %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+{% endaddtoblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+   
+</head>
+<body>
+  
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,400,700'>
+
+
+        
+        <form id="contact-form" method="post" action="" role="form">
+        {% csrf_token %}
+        <div class="messages"></div>
+
+        <div class="controls">
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="form_name">Firstname *</label>
+                <input id="form_name" type="text" name="your_name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="form_lastname">Subject *</label>
+                <input id="form_lastname" type="text" name="subject" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="form_email">Email *</label>
+                <input id="form_email" type="email" name="sender" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="form_message">Message *</label>
+                <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required data-error="Please,leave us a message."></textarea>
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+               <label for="id_cc_myself" class="checkbox_cc">Cc myself:</label>
+                 <input type="checkbox" name="cc_myself" id="id_cc_myself">
+              </div>
+            </div>
+          </div>
+
+            <div class="col-md-12">
+              <input type="submit" class="btn btn-success btn-send" value="Send message" id = 'submit-button'>
+            </div>
+          </div>
+         
+        </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+  
