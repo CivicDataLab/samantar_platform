@@ -171,8 +171,9 @@ CMS_TEMPLATES = (
     ('sidebar_right.html', 'Sidebar Right'),
     ('index.html', 'index'),
     ('roadmap.html', 'roadmap'),
-    ('architecture.html', 'architecture'),
-    ('contact.html', 'contact-us')
+    ('streams.html', 'streams'),
+    ('contact.html', 'contact-us'),
+    ('about_us.html', 'about-us')
 )
 
 CMS_PERMISSION = True
@@ -201,3 +202,9 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'shreyacontact0809@gmail.com'
+EMAIL_HOST_PASSWORD = 'virgo@123'
