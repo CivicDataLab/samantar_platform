@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+{% load static %}
+<style type="text/css">
+div .container {
+    background-image:none !important;
+}
+text-white{
+  color : black !important;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .stream-description{
+    padding-left: 50px!important;
+    padding-right: 50px!important;  
+  }
+  
+}
+</style>
+{% block content %}
+ 
+    <div class="container h-100 " id = "a">
+      <div class="row h-40 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end" style="padding-top: 100px;">
+
+          <h1 class="text-uppercase text-white font-weight-bold heading" style="color:black !important">{% placeholder "Heading" %}</h1>
+          <hr class="divider my-4">
+        </div>
+       
+      </div>
+      <div class="row aboutus-description" style="padding-left: 100px; padding-right: 100px; ">
+        <div class="aboutus-intro">{% placeholder "Introduction" %}</div>
+        <div class="streams">
+          <h3 class="streams-heading text-center justify-content-center" style="text-align: center;">{% placeholder "Streams" %}</h3>
+          <div class="card-group">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{% placeholder "Stream Title - 1" %}</h5>
+      <p class="card-text">{% placeholder "Stream Description - 1" %}</p>
+    </div>
+    <div class="card-footer">
+      <a href="" class="btn btn-primary">Explore</a>
+    </div>
+  </div>
+  <div class="card">
+ 
+    <div class="card-body">
+      <h5 class="card-title">{% placeholder "Stream Title - 2" %}</h5>
+      <p class="card-text">{% placeholder "Stream Description - 2" %}</p>
+    </div>
+    <div class="card-footer">
+      <a href="" class="btn btn-primary">Explore</a>
+    </div>
+  </div>
+  <div class="card">
+  
+    <div class="card-body">
+      <h5 class="card-title">{% placeholder "Stream Description - 3" %}</h5>
+      <p class="card-text">{% placeholder "Stream Description - 3" %}</p>
+    </div>
+    <div class="card-footer">
+      <a href="" class="btn btn-primary">Explore</a>
+    </div>
+  </div>
+</div>
+<div class="card-group">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{% placeholder "Stream Title - 4" %}</h5>
+      <p class="card-text">{% placeholder "Stream Description - 4" %}</p>
+    </div>
+    <div class="card-footer">
+      <a href="" class="btn btn-primary">Explore</a>
+    </div>
+  </div>
+  <div class="card">
+ 
+    <div class="card-body">
+      <h5 class="card-title">{% placeholder "Stream Title - 5" %}</h5>
+      <p class="card-text">{% placeholder "Stream Description - 5" %}</p>
+    </div>
+    <div class="card-footer">
+      <a href="" class="btn btn-primary">Explore</a>
+    </div>
+  </div>
+  <div class="card">
+  
+    <div class="card-body">
+      <h5 class="card-title">{% placeholder "Stream Description - 6" %}</h5>
+      <p class="card-text">{% placeholder "Stream Description - 6" %}</p>
+    </div>
+    <div class="card-footer">
+      <a href="" class="btn btn-primary">Explore</a>
+    </div>
+  </div>
+</div>
+<div class="card-group">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{% placeholder "Stream Title - 6" %}</h5>
+      <p class="card-text">{% placeholder "Stream Description - 6" %}</p>
+    </div>
+    <div class="card-footer">
+      <a href="" class="btn btn-primary">Explore</a>
+    </div>
+  </div>
+
+</div>
+        </div>
+      </div>
+    </div>
+ 
+
+
+{% endblock content %}
