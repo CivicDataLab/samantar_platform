@@ -26,6 +26,7 @@
                 float: left;
                 width: 20%;
             }
+            
         </style>
         {% block css_files %}
             <link href= "{% static 'vendor/fontawesome-free/css/all.min.css' %}"  rel="stylesheet" type="text/css">
@@ -36,10 +37,16 @@
 
             <!-- Plugin CSS -->
             <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
+               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
             <!-- Theme CSS - Includes Bootstrap -->
             <link href= "{% static 'css/creative.min.css' %}" rel="stylesheet">
+
             <link href= "{% static 'css/navbar.css' %}" rel="stylesheet">
+
+
+            <link href= "{% static 'css/bootstrap-social.css' %}" rel="stylesheet">
 
         {% endblock css_files %}
         {% render_block "css" %}
