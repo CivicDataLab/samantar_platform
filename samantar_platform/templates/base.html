@@ -26,6 +26,7 @@
                 float: left;
                 width: 20%;
             }
+            
         </style>
         {% block css_files %}
             <link href= "{% static 'vendor/fontawesome-free/css/all.min.css' %}"  rel="stylesheet" type="text/css">
@@ -36,10 +37,16 @@
 
             <!-- Plugin CSS -->
             <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
+               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
             <!-- Theme CSS - Includes Bootstrap -->
             <link href= "{% static 'css/creative.min.css' %}" rel="stylesheet">
+
             <link href= "{% static 'css/navbar.css' %}" rel="stylesheet">
+
+
+            <link href= "{% static 'css/bootstrap-social.css' %}" rel="stylesheet">
 
         {% endblock css_files %}
         {% render_block "css" %}
@@ -48,21 +55,31 @@
         {% cms_toolbar %}
         {% block navbar %}
             <!-- Navigation -->
-            
-              <nav class="navbar navbar-expand-md navbar-dark  fixed-top" id="top-nav">
-                  <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Samantar</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#streams">Streams</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-
-                  <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
-                    <ul class="navbar-nav my-2 my-lg-0">
-                      {% show_menu 0 1 1 1 "menu/home_menu.html" %}
-                    </ul>
-                  </div>
-              </div>
-                </nav>
 
         {% endblock navbar %}
 
