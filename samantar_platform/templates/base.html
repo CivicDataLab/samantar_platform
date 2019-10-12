@@ -90,6 +90,47 @@
 
        
             {% block content %}{% endblock content %}
+        {% block footer %}
+        <footer  style="background-color: #2c292f">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-4 text-center text-md-left ">
+                    
+                    <div class="py-0">
+                       <a href="https://www.civicdatalab.in/">
+          <img class="logo" src="{% static 'img/logos/cdl_logo.png' %}" alt="civicdatalab" style="width: 100px;height: 100px">
+        </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 text-white text-center text-md-left ">
+                    <div class="py-2 my-4">
+                        <div class="py-2">
+                        <a href="#"><i class="fab fa-github fa-2x text-primary mx-3"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-2x text-danger mx-3"></i></a>
+                        <a href="#"><i class="fab fa-linkedin fa-2x text-info mx-3"></i></a>
+                       
+                    </div>
+ 
+           
+                    </div>  
+                </div>
+                
+                <div class="col-md-4 text-white my-4 text-center text-md-left ">
+                    
+        <p class="contact-text">Contact Us : </p>
+        <p class="contact-email"><a class="footer-email-color" href="mailto:info@civicdatalab.in" target="_blank">info@civicdatalab.in</a></p>
+      </div>
+                </div>
+                <div class="row">
+      <div class="col-lg-12 text-center">
+        <p class="license-text">All work under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 (CC-BY)</a></p>
+      </div>
+            </div>  
+        </div>
+     </footer>
+        {% endblock footer %}
+
         </div>
 
         {% block js_files %}
