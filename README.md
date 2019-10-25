@@ -1,4 +1,5 @@
 # Samantar
+[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://github.com/CivicDataLab/samantar_platform/blob/master/LICENSE)
 
 ### Requirenments
 Refer to Django/Python compatibility for Django-CMS - [Link](http://docs.django-cms.org/en/latest/#django-python-compatibility-table)
@@ -7,7 +8,7 @@ Refer to Django/Python compatibility for Django-CMS - [Link](http://docs.django-
 
 ```
 # Setup Development environment
-$ virtualenv env  
+$ virtualenv env
 $ source env/bin/activate
 
 # Clone Repository
